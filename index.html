@@ -31,3 +31,31 @@
   </main><div class="toast" id="toast"></div>
   <script>const toast=document.getElementById('toast'); function notify(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)}document.getElementById('liveBtn').onclick=()=>notify('Live location is up to date.');document.getElementById('settingsBtn').onclick=()=>notify('Alert settings are ready to customize.');document.getElementById('addPlace').onclick=()=>notify('Choose a location to add a new place.');document.getElementById('historyBtn').onclick=()=>notify('Showing today’s location history.');document.getElementById('eventsBtn').onclick=()=>notify('Your Charlotte weekend ideas are ready!');function updateClocks(){document.querySelectorAll('[data-zone]').forEach(clock=>clock.textContent=new Intl.DateTimeFormat('en-US',{timeZone:clock.dataset.zone,hour:'numeric',minute:'2-digit'}).format(new Date()))}updateClocks();setInterval(updateClocks,30000);</script>
 </body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Surya</title>
+    <style>
+      :root {
+        font-family: system-ui, sans-serif;
+        color: #ffffff;
+        background: #111827;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 10vw, 6rem);
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Surya</h1>
+  </body>
+</html>
